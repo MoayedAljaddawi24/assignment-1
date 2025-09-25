@@ -309,3 +309,94 @@ input:focus, textarea:focus {
 
   .nav.open { display: flex; }
 }
+
+/* === THEME POLISH === */
+:root{
+  --bg: #f9fafb;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --surface: #ffffff;
+  --border: #e5e7eb;
+  --ring: rgba(37,99,235,0.15);
+  --header-bg: #222;
+  --radius: 12px;
+  --section-space: 3rem;
+  --shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+/* Base overrides */
+body{
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Consistent section spacing */
+section{
+  margin-bottom: var(--section-space);
+}
+
+/* Header uses theme color */
+.site-header{
+  background: var(--header-bg);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Hero already looks good — keep as is */
+
+/* Buttons with theme variables */
+.btn{
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+}
+.btn:hover{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+.btn:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+.btn-primary{
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* Card polish */
+.card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.card:hover{ box-shadow: var(--shadow); }
+.card-img{ border-bottom: 1px solid var(--border); }
+
+/* Section headings */
+#about h2, #projects h2, #contact h2{
+  color: var(--text);
+}
+
+/* About text */
+#about p{
+  color: var(--muted);
+}
+
+/* Form polish */
+input, textarea{
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+input:focus, textarea:focus{
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+.error{ color: #b91c1c; }
+
