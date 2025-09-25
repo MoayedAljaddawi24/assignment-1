@@ -85,7 +85,6 @@
     btn.setAttribute('aria-expanded', String(isOpen));
   });
 
-  // Close the menu after clicking a link (nice UX)
   nav.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', () => {
       nav.classList.remove('open');
@@ -94,3 +93,36 @@
   });
 })();
 
+
+(function () {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+
+  const root = document.documentElement;
+
+  function applyTheme(mode) {
+    const isDark = mode === 'dark';
+    root.classList.toggle('dark', isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
+
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    applyTheme(saved);
+  } else {
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(prefersDark ? 'dark' : 'light');
+  }
+
+  btn.addEventListener('click', () => {
+    const next = root.classList.contains('dark') ? 'light' : 'dark';
+    applyTheme(next);
+  });
+
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+
+      if (!localStorage.getItem('theme')) applyTheme(e.matches ? 'dark' : 'light');
+    });
+  }
+})();

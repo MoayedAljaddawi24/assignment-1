@@ -367,7 +367,6 @@ section{
   color: #fff;
 }
 
-/* Card polish */
 .card{
   background: var(--surface);
   border: 1px solid var(--border);
@@ -376,17 +375,14 @@ section{
 .card:hover{ box-shadow: var(--shadow); }
 .card-img{ border-bottom: 1px solid var(--border); }
 
-/* Section headings */
 #about h2, #projects h2, #contact h2{
   color: var(--text);
 }
 
-/* About text */
 #about p{
   color: var(--muted);
 }
 
-/* Form polish */
 input, textarea{
   background: var(--surface);
   color: var(--text);
@@ -400,3 +396,28 @@ input:focus, textarea:focus{
 
 .error{ color: #b91c1c; }
 
+.theme-toggle{
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  margin-right: .25rem;
+}
+
+:root.dark{
+  --bg: #0b0c0f;
+  --text: #eef2f7;
+  --muted: #9aa4b2;
+  --primary: #5b9dff;
+  --surface: #141821;
+  --border: rgba(255,255,255,0.12);
+  --ring: rgba(91,157,255,0.25);
+  --header-bg: #141821;
+}
+
+/* Ensure components adapt automatically via variables you already use */
+:root.dark body{ background: var(--bg); color: var(--text); }
+:root.dark .nav a{ color:#cfd6e0; }
+:root.dark .nav a:hover{ color:#fff; background: rgba(255,255,255,0.08); }
