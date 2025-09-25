@@ -1,1 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts (future-proofing)
+dist/
+build/
+
+# Node (if you add tooling later)
+node_modules/
+
+# Env files (if you add APIs later)
+.env
 
