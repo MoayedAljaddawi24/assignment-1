@@ -8,14 +8,21 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <header class="site-header">
+      <a class="logo" href="#hero">My Portfolio</a>
+
+      <nav id="siteNav" class="nav">
+        <a href="#hero">Hero</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </header>
+
 
   <main>
     <section id="hero" class="hero">
@@ -53,7 +60,7 @@
               reserve tickets, and view bookings. Practiced HTML, CSS, and basic JavaScript for forms.
             </p>
             <ul class="tags">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              <li>Java</li>
             </ul>
           </div>
         </article>
@@ -66,7 +73,7 @@
               university events. Currently focusing on layout and responsiveness; features to follow.
             </p>
             <ul class="tags">
-              <li>HTML</li><li>CSS</li>
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
             </ul>
           </div>
         </article>
@@ -105,5 +112,7 @@
   <footer>
     <p>&copy; 2025 [Moayed Aljaddawi]</p>
   </footer>
+
+  <script src="js/script.js" defer></script>
 </body>
 </html>

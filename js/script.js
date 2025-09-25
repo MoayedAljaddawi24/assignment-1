@@ -1,4 +1,4 @@
-// Basic client-side validation for the contact form
+
 (function () {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -19,7 +19,7 @@
     return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
   }
 
-  // Validate on submit
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     let ok = true;
@@ -53,7 +53,7 @@
     }
   });
 
-  // Optional: inline validation on blur
+
   [nameInput, emailInput, messageInput].forEach((input) => {
     input.addEventListener('blur', () => {
       if (input === nameInput && !nameInput.value.trim()) {
@@ -65,11 +65,31 @@
       }
     });
 
-    // Clear error while typing
+
     input.addEventListener('input', () => {
       if (input === nameInput) setError(nameError);
       if (input === emailInput) setError(emailError);
       if (input === messageInput) setError(messageError);
+    });
+  });
+})();
+
+
+(function () {
+  const btn = document.getElementById('menuToggle');
+  const nav = document.getElementById('siteNav');
+  if (!btn || !nav) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close the menu after clicking a link (nice UX)
+  nav.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
     });
   });
 })();
