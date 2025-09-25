@@ -190,3 +190,50 @@ p {
   border-radius: 999px;
 }
 
+/* CONTACT */
+#contact {
+  margin-top: 3rem;
+}
+
+.form {
+  max-width: 680px;
+  margin: 1rem auto 0;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 600;
+  color: #111;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  color: #111;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.error {
+  color: #b91c1c;
+  min-height: 1.1rem; /* keeps layout stable */
+}
+
+.form-note {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
