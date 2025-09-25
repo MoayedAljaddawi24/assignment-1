@@ -5,13 +5,27 @@ A simple, responsive portfolio built with **HTML**, **CSS**, and **vanilla JavaS
 ## ✨ Features
 - Required sections: **Hero**, **About**, **Projects**, **Contact**
 - Responsive layout (cards + grid)
-- Header with mobile menu (hamburger)
+- Header with responsive navigation (hamburger optional)
 - **Dark/Light** theme toggle (remembers preference)
+- Smooth scrolling with sticky-header offset
 - Contact form with client-side validation
+- Lazy-loaded project images
 - Themed footer with auto-updating year
+- Basic SEO meta description
+
+## 🧩 Projects
+- **Event Ticket Reservation System** — browse events, reserve tickets, view bookings.
+- **KFUPM Event Hub (In Progress)** — discover, register for, and manage university events.
 
 ## 🚀 Run locally
-Open `index.html` in your browser  
-**or** start a local server:
-```bash
+1. Clone this repo
+   ```bash
+   git clone https://github.com/MoayedAljaddawi24/assignment-1.git
+   cd assignment-1
+   ```
+2. Open `index.html` in your browser.
+   ```bash
 
+## 📄 Docs
+- `docs/technical-documentation.md`
+- `docs/ai-usage-report.md`
