@@ -13,9 +13,21 @@ A simple, responsive portfolio built with **HTML**, **CSS**, and **vanilla JavaS
 - Themed footer with auto-updating year
 - Basic SEO meta description
 
-## 🧩 Projects
-- **Event Ticket Reservation System** — browse events, reserve tickets, view bookings.
-- **KFUPM Event Hub (In Progress)** — discover, register for, and manage university events.
+## 📁 Structure
+assignment-1/
+├─ index.html
+├─ css/
+│  └─ styles.css
+├─ js/
+│  └─ script.js
+├─ assets/
+│  └─ images/
+│     ├─ reservation.jpg
+│     └─ kfupm-event-hub.jpg
+└─ docs/
+   ├─ ai-usage-report.md
+   └─ technical-documentation.md
+
 
 ## 🚀 Run locally
 1. Clone this repo
@@ -29,3 +41,7 @@ A simple, responsive portfolio built with **HTML**, **CSS**, and **vanilla JavaS
 ## 📄 Docs
 - `docs/technical-documentation.md`
 - `docs/ai-usage-report.md`
+
+## 🧩 Projects
+- **Event Ticket Reservation System** — browse events, reserve tickets, view bookings.
+- **KFUPM Event Hub (In Progress)** — discover, register for, and manage university events.
