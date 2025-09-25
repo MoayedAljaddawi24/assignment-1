@@ -5,8 +5,8 @@
 
 ## What I Used It For
 - Planning the project structure and required sections.
-- Suggestions for CSS organization (variables, spacing) and responsive layout.
-- Drafting small JS snippets (theme toggle, smooth scroll offset, form validation) which I read, understood, and edited.
+- Suggestions for CSS organization and responsive layout.
+- Drafting small JS snippets which I read, understood, and edited.
 - Copy editing for the About/Projects text to sound more professional.
 - Creating a step-by-step plan to keep a meaningful commit history.
 
