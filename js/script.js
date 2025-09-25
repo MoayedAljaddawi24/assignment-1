@@ -131,3 +131,35 @@
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();
+
+// Smooth-scroll for all in-page links with header offset
+(function () {
+  const header = document.querySelector('.site-header');
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+
+      const id = decodeURIComponent(hash.slice(1));
+      const target = document.getElementById(id);
+      if (!target) return;
+
+      e.preventDefault();
+
+      // Recalculate header height each click (handles mobile/desktop changes)
+      const HEADER_OFFSET = header ? header.offsetHeight : 64;
+
+      const y = target.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET - 8;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+
+      // Close mobile nav if open
+      const nav = document.getElementById('siteNav');
+      const btn = document.getElementById('menuToggle');
+      if (nav && btn && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+})();
